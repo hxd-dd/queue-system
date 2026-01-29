@@ -315,7 +315,7 @@ function App() {
               gap: '24px',
             }}
           >
-            <div>
+      <div>
               <h1
                 style={{
                   fontSize: '28px',
@@ -343,7 +343,7 @@ function App() {
                   style={{
                     padding: '12px 24px',
                     borderRadius: '12px',
-                    border: 'none',
+                    border: activeTab === tab ? '1px solid rgba(255, 107, 157, 0.3)' : '1px solid transparent',
                     background:
                       activeTab === tab
                         ? 'linear-gradient(135deg, rgba(255, 107, 157, 0.2) 0%, rgba(196, 113, 237, 0.2) 100%)'
@@ -355,7 +355,6 @@ function App() {
                     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     position: 'relative',
                     overflow: 'hidden',
-                    border: activeTab === tab ? '1px solid rgba(255, 107, 157, 0.3)' : '1px solid transparent',
                   }}
                   onMouseEnter={(e) => {
                     if (activeTab !== tab) {
@@ -920,7 +919,7 @@ function App() {
                   value: `${avgTodayHandleMinutes} 分钟`,
                   color: '#12c2e9',
                 },
-              ].map((stat, idx) => (
+              ].map((stat) => (
                 <div
                   key={stat.label}
                   style={{
@@ -1457,7 +1456,7 @@ function App() {
                               }}
                             >
                               提升优先级
-                            </button>
+        </button>
                           </td>
                         </tr>
                       ))
